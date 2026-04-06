@@ -256,11 +256,11 @@ export default function App() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 {/* Image Gallery */}
                 <div className="space-y-4">
-                  <div className="aspect-square rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-sm">
+                  <div className="aspect-square rounded-3xl overflow-hidden bg-white border border-slate-200 shadow-sm group">
                     <img 
                       src={viewingProduct.image} 
                       alt={viewingProduct.name} 
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-125"
                       referrerPolicy="no-referrer"
                     />
                   </div>
@@ -422,7 +422,7 @@ export default function App() {
                       className="bg-white rounded-2xl border border-slate-100 p-4 hover:shadow-lg transition-all cursor-pointer group"
                     >
                       <div className="aspect-square rounded-xl overflow-hidden mb-4 bg-slate-50">
-                        <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform" referrerPolicy="no-referrer" />
+                        <img src={p.image} alt={p.name} className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500" referrerPolicy="no-referrer" />
                       </div>
                       <h4 className="font-bold text-slate-900 text-sm line-clamp-1">{p.name}</h4>
                       <span className="text-blue-600 font-bold text-sm">${p.price.toFixed(2)}</span>
@@ -471,7 +471,7 @@ export default function App() {
                         <img 
                           src={product.image} 
                           alt={product.name}
-                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
                         <div className="absolute top-3 left-3">
